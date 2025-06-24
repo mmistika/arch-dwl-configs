@@ -1,0 +1,11 @@
+[user]
+	email = mistikasoft@gmail.com
+	name = mmistika
+	signingkey = /home/user/.ssh/id_ed25519.pub
+[core]
+	autocrlf = input
+	editor   = nvim
+[init]
+	defaultBranch = development
+[gpg]
+	format = ssh
