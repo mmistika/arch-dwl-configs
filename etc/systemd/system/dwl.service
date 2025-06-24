@@ -1,0 +1,25 @@
+[Unit]
+Description=dwl Wayland Compositor
+After=graphical.target systemd-user-sessions.service modprobe@drm.service
+Conflicts=getty@tty1.service
+
+[Service]
+User=user
+Group=user
+WorkingDirectory=~
+
+PAMName=login
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+
+
+EnvironmentFile=-/home/user/.config/environment.d/*.conf
+ExecStart=/usr/bin/env dbus-run-session dwl -s "/home/user/.scripts/dwl-session.sh <&-"
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical.target
