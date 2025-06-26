@@ -1,0 +1,26 @@
+From 3c85cd1a94137bef3e234a1478f936c66819e3ec Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Wed, 25 Jun 2025 17:32:02 +0200
+Subject: [PATCH 13/14] conf: wmenu-run args
+
+Signed-off-by: mmistika <mistikasoft@gmail.com>
+---
+ config.def.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index 4bd7964..acd8328 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -145,7 +145,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
+ 
+ /* commands */
+ static const char *termcmd[] = { "foot", NULL };
+-static const char *menucmd[] = { "wmenu-run", NULL };
++static const char *menucmd[] = { "wmenu-run", "-iS", "3d3f43", NULL };
+ 
+ static const Key keys[] = {
+ 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
+-- 
+2.50.0
+

@@ -1,0 +1,35 @@
+From 63efdc4fbabe02e67d7106a9addccf9ab3897239 Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Wed, 25 Jun 2025 17:12:52 +0200
+Subject: [PATCH 09/14] conf: configure mouse and trackpad
+
+Signed-off-by: mmistika <mistikasoft@gmail.com>
+---
+ config.def.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 30de18a..57a2bd7 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -88,7 +88,7 @@ static const int left_handed = 0;
+ static const int middle_button_emulation = 0;
+ 
+ /* Natural scrolling */
+-static const int trackpad_natural_scrolling = 0;
++static const int trackpad_natural_scrolling = 1;
+ static const int mouse_natural_scrolling = 0;
+ 
+ /* You can choose between:
+@@ -120,7 +120,7 @@ LIBINPUT_CONFIG_ACCEL_PROFILE_ADAPTIVE
+ static const enum libinput_config_accel_profile trackpad_accel_profile = LIBINPUT_CONFIG_ACCEL_PROFILE_ADAPTIVE;
+ static const double trackpad_accel_speed = 0.0;
+ static const enum libinput_config_accel_profile mouse_accel_profile = LIBINPUT_CONFIG_ACCEL_PROFILE_FLAT;
+-static const double mouse_accel_speed = 0.0;
++static const double mouse_accel_speed = -0.4;
+ 
+ /* You can choose between:
+ LIBINPUT_CONFIG_TAP_MAP_LRM -- 1/2/3 finger tap maps to left/right/middle
+-- 
+2.50.0
+

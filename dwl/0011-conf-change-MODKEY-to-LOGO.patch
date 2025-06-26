@@ -1,0 +1,35 @@
+From 893b1603e46dd23a795c2db444c968965acf98b0 Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Wed, 25 Jun 2025 17:22:49 +0200
+Subject: [PATCH 11/14] conf: change MODKEY to LOGO
+
+Signed-off-by: mmistika <mistikasoft@gmail.com>
+---
+ config.def.h | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 7577894..6b752de 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -132,7 +132,7 @@ LIBINPUT_CONFIG_TAP_MAP_LMR -- 1/2/3 finger tap maps to left/middle/right
+ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TAP_MAP_LRM;
+ 
+ /* If you want to use the windows key for MODKEY, use WLR_MODIFIER_LOGO */
+-#define MODKEY WLR_MODIFIER_ALT
++#define MODKEY WLR_MODIFIER_LOGO
+ 
+ #define TAGKEYS(KEY,SKEY,TAG) \
+ 	{ MODKEY,                    KEY,            view,            {.ui = 1 << TAG} }, \
+@@ -165,8 +165,6 @@ static const Key keys[] = {
+ 	{ MODKEY,                    XKB_KEY_t,          setlayout,      {.v = &layouts[0]} },
+ 	{ MODKEY,                    XKB_KEY_f,          setlayout,      {.v = &layouts[1]} },
+ 	{ MODKEY,                    XKB_KEY_m,          setlayout,      {.v = &layouts[2]} },
+-	{ MODKEY,                    XKB_KEY_space,      setlayout,      {0} },
+-	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_space,      togglefloating, {0} },
+ 	{ MODKEY,                    XKB_KEY_e,         togglefullscreen, {0} },
+ 	{ MODKEY,                    XKB_KEY_0,          view,           {.ui = ~0} },
+ 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_parenright, tag,            {.ui = ~0} },
+-- 
+2.50.0
+

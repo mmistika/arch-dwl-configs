@@ -1,0 +1,28 @@
+From c35b8eb03db75ebb54a8becc5f3bedc4a52e8ef8 Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Thu, 26 Jun 2025 00:24:07 +0200
+Subject: [PATCH 14/14] conf: add bindings for screenshots
+
+Signed-off-by: mmistika <mistikasoft@gmail.com>
+---
+ config.def.h | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/config.def.h b/config.def.h
+index acd8328..1671fe5 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -150,6 +150,10 @@ static const char *menucmd[] = { "wmenu-run", "-iS", "3d3f43", NULL };
+ static const Key keys[] = {
+ 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
+ 	/* modifier                  key                 function        argument */
++	/* Screenshots */
++	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_S,		 spawn,		 SHCMD("~/.scripts/screenshot_area.sh") },
++	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_X,		 spawn,		 SHCMD("~/.scripts/screenshot_full.sh") },
++	/* Default */
+ 	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
+ 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     spawn,          {.v = termcmd} },
+ 	{ MODKEY,                    XKB_KEY_b,          togglebar,      {0} },
+-- 
+2.50.0
+

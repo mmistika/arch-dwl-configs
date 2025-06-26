@@ -1,0 +1,29 @@
+From c64905f1d319d8a60e121467f3179a1c4f3b5773 Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Tue, 24 Jun 2025 19:51:20 +0200
+Subject: [PATCH 01/14] chore: compile with XWayland support
+
+---
+ config.mk | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+diff --git a/config.mk b/config.mk
+index 1e0b810..22bd47b 100644
+--- a/config.mk
++++ b/config.mk
+@@ -8,10 +8,7 @@ PREFIX = /usr/local
+ MANDIR = $(PREFIX)/share/man
+ DATADIR = $(PREFIX)/share
+ 
+-XWAYLAND =
+-XLIBS =
+-# Uncomment to build XWayland support
+-#XWAYLAND = -DXWAYLAND
+-#XLIBS = xcb xcb-icccm
++XWAYLAND = -DXWAYLAND
++XLIBS = xcb xcb-icccm
+ 
+ CC = gcc
+-- 
+2.50.0
+

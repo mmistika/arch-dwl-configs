@@ -1,0 +1,29 @@
+From 25eaa1821bad28d036f2e9903d8680c877cea310 Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Wed, 25 Jun 2025 17:20:46 +0200
+Subject: [PATCH 10/14] conf: add xkb rules
+
+Signed-off-by: mmistika <mistikasoft@gmail.com>
+---
+ config.def.h | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index 57a2bd7..7577894 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -69,7 +69,10 @@ static const struct xkb_rule_names xkb_rules = {
+ 	/* example:
+ 	.options = "ctrl:nocaps",
+ 	*/
+-	.options = NULL,
++	.model = "p105",
++	.layout = "us,ua",
++	.variant = ",",
++	.options = "compose:menu,grp:win_space_toggle",
+ };
+ 
+ /* numlock and capslock */
+-- 
+2.50.0
+
