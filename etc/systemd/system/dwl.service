@@ -6,7 +6,7 @@ Conflicts=getty@tty1.service
 [Service]
 User=user
 Group=user
-WorkingDirectory=~
+WorkingDirectory=/home/user
 
 PAMName=login
 TTYPath=/dev/tty1
@@ -15,8 +15,8 @@ TTYVHangup=yes
 TTYVTDisallocate=yes
 
 
-EnvironmentFile=-/home/user/.config/environment.d/*.conf
-ExecStart=/usr/bin/env dbus-run-session dwl -s "/home/user/.scripts/dwl-session.sh <&-"
+EnvironmentFile=-/home/user/.config/environment.d/wayland.conf
+ExecStart=/usr/bin/sh -c '/usr/bin/env dbus-run-session slstatus -s | dwl -s "/home/user/.scripts/dwl-session.sh <&-"'
 Restart=always
 StandardOutput=journal
 StandardError=journal
