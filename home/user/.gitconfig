@@ -1,7 +1,7 @@
 [user]
 	email = mistikasoft@gmail.com
 	name = mmistika
-	signingkey = /home/user/.ssh/id_ed25519.pub
+	signingkey = /home/user/.ssh/id_ed25519
 [core]
 	autocrlf = input
 	editor   = nvim
