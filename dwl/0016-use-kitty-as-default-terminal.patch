@@ -1,0 +1,25 @@
+From c27df5d418deca8c7fe8c28ef31e0892b293b90c Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Sat, 28 Jun 2025 22:52:05 +0200
+Subject: [PATCH] use kitty as default terminal
+
+---
+ config.def.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index bb9fb1e..ccd0caa 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -144,7 +144,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
+ #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+ 
+ /* commands */
+-static const char *termcmd[] = { "foot", NULL };
++static const char *termcmd[] = { "kitty", NULL };
+ static const char *menucmd[] = { "wmenu-run", "-iS", "3d3f43", NULL };
+ 
+ static const Key keys[] = {
+-- 
+2.50.0
+
