@@ -1,0 +1,16 @@
+layer=overlay
+height=80
+background-color=#222222
+border-color=#3D3F43
+border-radius=8
+max-icon-size=48
+ignore-timeout=1
+default-timeout=8000
+progress-color=over #50C878
+
+[mode=idle]
+default-timeout=0
+
+[urgency=high]
+border-color=#bf616a
+default-timeout=0
