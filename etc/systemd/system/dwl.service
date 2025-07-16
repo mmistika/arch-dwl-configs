@@ -16,7 +16,7 @@ TTYVTDisallocate=yes
 
 
 EnvironmentFile=-/home/user/.config/environment.d/wayland.conf
-ExecStart=/usr/bin/sh -c '/usr/bin/env dbus-run-session slstatus -s | dwl -s "/home/user/.scripts/dwl-session.sh <&-"'
+ExecStart=dbus-launch sh -c 'slstatus -s | dwl -s "/home/user/.scripts/dwl-session.sh <&-"'
 Restart=always
 StandardOutput=journal
 StandardError=journal
