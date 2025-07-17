@@ -11,6 +11,7 @@ This repository contains my configuration files for a Arch Linux setup using the
 - [numlock-capslock](https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/numlock-capslock)
 - [smartborders](https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/smartborders)
 - [mouse-trackpad-split](https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/mouse-trackpad-split)
+- [better-resize](https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/better-resize)
 
 ### Prompt:
 Starship config is based on [wesleey/DRACULA.md](https://gist.github.com/wesleey/eeec29d557fd971277748dea274a0cf3)

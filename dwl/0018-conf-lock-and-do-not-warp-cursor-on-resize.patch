@@ -1,0 +1,27 @@
+From 2929ba4bb01b9837e06588013f26fd7e37b19154 Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Thu, 17 Jul 2025 12:34:50 +0200
+Subject: [PATCH 2/2] conf: lock and do not warp cursor on resize
+
+---
+ config.def.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index f910bc5..fc01da9 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -41,8 +41,8 @@ static int log_level = WLR_ERROR;
+  * 4: closest to the cursor
+  */
+ static const int resize_corner = 4;
+-static const int warp_cursor = 1;	/* 1: warp to corner, 0: don’t warp */
+-static const int lock_cursor = 0;	/* 1: lock cursor, 0: don't lock */
++static const int warp_cursor = 0;	/* 1: warp to corner, 0: don’t warp */
++static const int lock_cursor = 1;	/* 1: lock cursor, 0: don't lock */
+ 
+ /* NOTE: ALWAYS keep a rule declared even if you don't use rules (e.g leave at least one example) */
+ static const Rule rules[] = {
+-- 
+2.50.1
+
