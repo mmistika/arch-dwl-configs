@@ -9,3 +9,5 @@
 	defaultBranch = development
 [gpg]
 	format = ssh
+[commit]
+	gpgsign = true
