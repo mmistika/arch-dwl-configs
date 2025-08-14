@@ -1,23 +1,21 @@
-From 675c642e96721098530a21cf206b3733ca33c168 Mon Sep 17 00:00:00 2001
+From c4d00b1cead317daaf678996e1f1236ffb85c5c7 Mon Sep 17 00:00:00 2001
 From: mmistika <mistikasoft@gmail.com>
-Date: Sat, 28 Jun 2025 15:15:43 +0200
-Subject: [PATCH] conf: brightness and volume bindings
+Date: Thu, 14 Aug 2025 20:41:54 +0200
+Subject: [PATCH 14/18] conf: screenshot/sound/brightness shortcuts
 
-Signed-off-by: mmistika <mistikasoft@gmail.com>
 ---
- config.def.h | 11 +++++++++--
- 1 file changed, 9 insertions(+), 2 deletions(-)
+ config.def.h | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
 
 diff --git a/config.def.h b/config.def.h
-index 1671fe5..bb9fb1e 100644
+index 28de54c..6a8969d 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -151,8 +151,15 @@ static const Key keys[] = {
+@@ -149,6 +149,17 @@ static const char *menucmd[] = { "wmenu-run", "-iS", "3d3f43", NULL };
+ static const Key keys[] = {
  	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
  	/* modifier                  key                 function        argument */
- 	/* Screenshots */
--	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_S,		 spawn,		 SHCMD("~/.scripts/screenshot_area.sh") },
--	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_X,		 spawn,		 SHCMD("~/.scripts/screenshot_full.sh") },
++	/* Screenshots */
 +	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_S,			 spawn,			 SHCMD("~/.scripts/screenshot_area.sh") },
 +	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_X,			 spawn,			 SHCMD("~/.scripts/screenshot_full.sh") },
 +	/* Sound */
@@ -27,9 +25,10 @@ index 1671fe5..bb9fb1e 100644
 +	/* Brightness */
 +	{ 0, XKB_KEY_XF86MonBrightnessUp,				 spawn,			 SHCMD("brightnessctl set 5%+") },
 +	{ 0, XKB_KEY_XF86MonBrightnessDown,				 spawn,			 SHCMD("brightnessctl set 5%-") },
- 	/* Default */
++	/* Default */
  	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
  	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     spawn,          {.v = termcmd} },
+ 	{ MODKEY,                    XKB_KEY_b,          togglebar,      {0} },
 -- 
-2.50.0
+2.50.1
 

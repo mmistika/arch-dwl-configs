@@ -1,7 +1,7 @@
-From c64905f1d319d8a60e121467f3179a1c4f3b5773 Mon Sep 17 00:00:00 2001
+From 7fb816eb245476969fdde679f3de0fd44b4780d9 Mon Sep 17 00:00:00 2001
 From: mmistika <mistikasoft@gmail.com>
-Date: Tue, 24 Jun 2025 19:51:20 +0200
-Subject: [PATCH 01/14] chore: compile with XWayland support
+Date: Thu, 14 Aug 2025 19:01:31 +0200
+Subject: [PATCH 01/18] chore: compile with XWayland support
 
 ---
  config.mk | 7 ++-----
@@ -25,5 +25,5 @@ index 1e0b810..22bd47b 100644
  
  CC = gcc
 -- 
-2.50.0
+2.50.1
 

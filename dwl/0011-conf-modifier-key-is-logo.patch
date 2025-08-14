@@ -1,18 +1,17 @@
-From 893b1603e46dd23a795c2db444c968965acf98b0 Mon Sep 17 00:00:00 2001
+From 67029fa463afa387e73d927d394df2bab306ee57 Mon Sep 17 00:00:00 2001
 From: mmistika <mistikasoft@gmail.com>
-Date: Wed, 25 Jun 2025 17:22:49 +0200
-Subject: [PATCH 11/14] conf: change MODKEY to LOGO
+Date: Thu, 14 Aug 2025 20:35:04 +0200
+Subject: [PATCH 11/18] conf: modifier key is logo
 
-Signed-off-by: mmistika <mistikasoft@gmail.com>
 ---
  config.def.h | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/config.def.h b/config.def.h
-index 7577894..6b752de 100644
+index 20ad174..3c13cbd 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -132,7 +132,7 @@ LIBINPUT_CONFIG_TAP_MAP_LMR -- 1/2/3 finger tap maps to left/middle/right
+@@ -131,7 +131,7 @@ LIBINPUT_CONFIG_TAP_MAP_LMR -- 1/2/3 finger tap maps to left/middle/right
  static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TAP_MAP_LRM;
  
  /* If you want to use the windows key for MODKEY, use WLR_MODIFIER_LOGO */
@@ -21,7 +20,7 @@ index 7577894..6b752de 100644
  
  #define TAGKEYS(KEY,SKEY,TAG) \
  	{ MODKEY,                    KEY,            view,            {.ui = 1 << TAG} }, \
-@@ -165,8 +165,6 @@ static const Key keys[] = {
+@@ -164,8 +164,6 @@ static const Key keys[] = {
  	{ MODKEY,                    XKB_KEY_t,          setlayout,      {.v = &layouts[0]} },
  	{ MODKEY,                    XKB_KEY_f,          setlayout,      {.v = &layouts[1]} },
  	{ MODKEY,                    XKB_KEY_m,          setlayout,      {.v = &layouts[2]} },
@@ -31,5 +30,5 @@ index 7577894..6b752de 100644
  	{ MODKEY,                    XKB_KEY_0,          view,           {.ui = ~0} },
  	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_parenright, tag,            {.ui = ~0} },
 -- 
-2.50.0
+2.50.1
 

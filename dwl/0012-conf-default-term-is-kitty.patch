@@ -1,0 +1,26 @@
+From b39949cbfd895054e3565abaf4bb7c19a283faba Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Thu, 14 Aug 2025 20:39:00 +0200
+Subject: [PATCH 12/18] conf: default term is kitty
+
+---
+ config.def.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index 3c13cbd..b81a35e 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -143,8 +143,8 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
+ #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+ 
+ /* commands */
+-static const char *termcmd[] = { "foot", NULL };
+ static const char *menucmd[] = { "wmenu-run", NULL };
++static const char *termcmd[] = { "kitty", NULL };
+ 
+ static const Key keys[] = {
+ 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
+-- 
+2.50.1
+

@@ -1,27 +1,26 @@
-From 58a40ea468f5d54adc781e21e1ac75352be537cc Mon Sep 17 00:00:00 2001
+From 42a7205fb164a124ac442e29dc052f2ce264caf4 Mon Sep 17 00:00:00 2001
 From: mmistika <mistikasoft@gmail.com>
-Date: Wed, 25 Jun 2025 17:29:16 +0200
-Subject: [PATCH 12/14] conf: styles
+Date: Thu, 14 Aug 2025 20:44:02 +0200
+Subject: [PATCH 18/18] conf: bar styles
 
-Signed-off-by: mmistika <mistikasoft@gmail.com>
 ---
  config.def.h | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/config.def.h b/config.def.h
-index 6b752de..4bd7964 100644
+index 502b47f..0e202f7 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -9,7 +9,7 @@ static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will
- static const int smartborders              = 1;
+@@ -8,7 +8,7 @@ static const int sloppyfocus               = 1;  /* focus follows mouse */
+ static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will disable idle tracking even if it's surface isn't visible  */
  static const unsigned int borderpx         = 1;  /* border pixel of windows */
  static const int showbar                   = 1; /* 0 means no bar */
 -static const int topbar                    = 1; /* 0 means bottom bar */
 +static const int topbar                    = 0; /* 0 means bottom bar */
  static const char *fonts[]                 = {"monospace:size=10"};
  static const float rootcolor[]             = COLOR(0x000000ff);
- 
-@@ -18,7 +18,7 @@ static const float fullscreen_bg[]         = {0.1f, 0.1f, 0.1f, 1.0f}; /* You ca
+ /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
+@@ -16,7 +16,7 @@ static const float fullscreen_bg[]         = {0.1f, 0.1f, 0.1f, 1.0f}; /* You ca
  static uint32_t colors[][3]                = {
  	/*               fg          bg          border    */
  	[SchemeNorm] = { 0xbbbbbbff, 0x222222ff, 0x444444ff },
@@ -31,5 +30,5 @@ index 6b752de..4bd7964 100644
  };
  
 -- 
-2.50.0
+2.50.1
 

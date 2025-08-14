@@ -1,0 +1,31 @@
+From 3c43353d3077978117f3b3a551e35da5b8b605ca Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Thu, 14 Aug 2025 20:43:41 +0200
+Subject: [PATCH 17/18] conf: xkb rules
+
+---
+ config.def.h | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index fc9caa2..502b47f 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -72,10 +72,10 @@ static const MonitorRule monrules[] = {
+ /* keyboard */
+ static const struct xkb_rule_names xkb_rules = {
+ 	/* can specify fields: rules, model, layout, variant, options */
+-	/* example:
+-	.options = "ctrl:nocaps",
+-	*/
+-	.options = NULL,
++	.model = "p105",
++	.layout = "us,ua",
++	.variant = ",",
++	.options = "compose:menu,grp:win_space_toggle",
+ };
+ 
+ static const int repeat_rate = 25;
+-- 
+2.50.1
+

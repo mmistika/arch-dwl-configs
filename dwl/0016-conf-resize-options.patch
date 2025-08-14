@@ -1,0 +1,25 @@
+From 6ed2709621fd0a7f12ea5e6d66f1c76ef66039a0 Mon Sep 17 00:00:00 2001
+From: mmistika <mistikasoft@gmail.com>
+Date: Thu, 14 Aug 2025 20:43:13 +0200
+Subject: [PATCH 16/18] conf: resize options
+
+---
+ config.def.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index 37efdb8..fc9caa2 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -35,7 +35,7 @@ static int log_level = WLR_ERROR;
+  * 4: closest to the cursor
+  */
+ static const int resize_corner = 4;
+-static const int warp_cursor = 1;	/* 1: warp to corner, 0: don’t warp */
++static const int warp_cursor = 0;	/* 1: warp to corner, 0: don’t warp */
+ static const int lock_cursor = 0;	/* 1: lock cursor, 0: don't lock */
+ 
+ /* NOTE: ALWAYS keep a rule declared even if you don't use rules (e.g leave at least one example) */
+-- 
+2.50.1
+
